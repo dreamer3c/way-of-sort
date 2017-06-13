@@ -12,7 +12,7 @@ int main()
 {
     FILE *fp1,*fp2;
     int a[10],i,j,t;
-    fp1=fopen("list.txt","r");
+    fp1=fopen("/Users/a20161104579/Desktop/second/way of sort/way of sort/list.txt","r");
     if(fp1==NULL)
     {
         printf("file not exist");
@@ -21,9 +21,8 @@ int main()
     {
         for(i=0;i<10;i++)
         {
-            fscanf(fp1,"%d",&a[i]);
+            fscanf(fp1,"%d ",&a[i]);
         }
-        fclose(fp1);
         for(i=0;i<10;i++)
         {
             for(j=1;j<10-i;j++)
@@ -38,10 +37,11 @@ int main()
         }
         for(i=0;i<10;i++)
         {
-            fp2=fopen("list2.txt","w");
-            fputc(a[i],fp2);
+            fp2=fopen("/Users/a20161104579/Desktop/second/way of sort/list2.txt","w");
+            fprintf(fp2,"%d ",a[i]);
         }
-        fclose(fp2);
     }
-        return 0;
+    fclose(fp1);
+    fclose(fp2);
+    return 0;
 }
