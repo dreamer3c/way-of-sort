@@ -11,7 +11,8 @@
 int main()
 {
     FILE *fp1,*fp2;
-    int a[10],i,j,t;
+    int i,j,t;
+    char a[10];
     fp1=fopen("/Users/a20161104579/Desktop/second/way of sort/way of sort/list.txt","r");
     fp2=fopen("/Users/a20161104579/Desktop/second/way of sort/list2.txt","w");
     if(fp1==NULL)
@@ -24,10 +25,10 @@ int main()
         {
             for(i=0;i<10;i++)
             {
-                fscanf(fp1,"%d",&a[i]);
+                a[i]=fgetc(fp1);
             }
         }
-                for(i=0;i<10;i++)
+        for(i=0;i<10;i++)
         {
             for(j=1;j<10-i;j++)
             {
@@ -41,7 +42,7 @@ int main()
         }
         for(i=0;i<10;i++)
         {
-            fprintf(fp2,"%d ",a[i]);
+            fprintf(fp2,"%c ",a[i]);
         }
     }
     fclose(fp1);
