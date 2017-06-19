@@ -11,7 +11,7 @@
 int main()
 {
     FILE *fp1,*fp2;
-    int i,j,t,te;
+    int i,j,t;
     int a[10];
     fp1=fopen("/Users/a20161104579/Desktop/second/way of sort/way of sort/list.txt","r");
     fp2=fopen("/Users/a20161104579/Desktop/second/way of sort/list2.txt","w");
@@ -22,7 +22,10 @@ int main()
     }
     else
     {
-        
+        while(a[9]!=EOF)
+        {
+            fscanf(fp1,"%d",a);
+        }
         for(i=0;i<10;i++)
         {
             for(j=1;j<10-i;j++)
